@@ -35,7 +35,7 @@ extern "C"
     // from the parent executable
     AL::ALBrokerManager::setInstance(pBroker->fBrokerManager.lock());
     AL::ALBrokerManager::getInstance()->addBroker(pBroker);
-      AL::ALModule::createModule<Interface>( pBroker, "Interface" );
+      AL::ALModule::createModule<PlayRequestInterface>( pBroker, "PlayRequestInterface" );
 
     return 0;
   }
@@ -53,7 +53,7 @@ extern "C"
     TMainType sig;
     sig = &_createModule;
     // call main
-    ALTools::mainFunction("Interface", argc, argv, sig);
+    ALTools::mainFunction("PlayRequestInterface", argc, argv, sig);
   }
 #endif
 
