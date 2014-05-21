@@ -63,6 +63,11 @@ class PlayRequestLogger : public AL::ALModule
       */
     void onChildCalled(const std::string &key, const AL::ALValue &value, const AL::ALValue &msg);
 
+    /**
+      * This method will be called when SoundClassified event is raised
+      */
+    void onSoundClassified(const std::string &key, const AL::ALValue &value, const AL::ALValue &msg);
+
   private:
     /**
       * Object implementation

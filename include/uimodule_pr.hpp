@@ -8,6 +8,7 @@
 #include <alproxies/almemoryproxy.h>
 #include <alproxies/alaudioplayerproxy.h>
 #include <alproxies/albehaviormanagerproxy.h>
+#include <alproxies/alledsproxy.h>
 #include <althread/almutex.h>
 
 namespace AL
@@ -38,6 +39,11 @@ class PlayRequestInterface : public AL::ALModule
       * This is called right after the module has been loaded by NAOqi
       */
     virtual void init();
+
+    /**
+      * Function used to start/enable the task
+      */
+    void startTask(const std::string &todo);
 
     /**
       * This method will be called when FrontTactilTouched event is raised
